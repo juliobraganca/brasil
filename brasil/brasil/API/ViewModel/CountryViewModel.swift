@@ -15,8 +15,8 @@ class CountryViewModel {
     
     private var service: CountryService = CountryService()
     
-    func fetchEmbassyAbroad() {
-        service.getEmbassyAbroadURLSession { result in
+    func fetchEmbassyAbroad(source: String) {
+        service.getEmbassyAbroadURLSession(source: source) { result in
             switch result {
             case .success(let success):
                 print(success)

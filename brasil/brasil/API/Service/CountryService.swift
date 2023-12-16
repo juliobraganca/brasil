@@ -9,8 +9,8 @@ import UIKit
 
 class CountryService {
     
-    func getEmbassyAbroadURLSession(completion: @escaping (Result<EmbassyAbroad, Error>) -> Void) {
-        guard let url = URL(string: "https://travel-info-api.p.rapidapi.com/find-embassy?source=usa&destination=brazil") else { return }
+    func getEmbassyAbroadURLSession(source: String, completion: @escaping (Result<EmbassyAbroad, Error>) -> Void) {
+        guard let url = URL(string: "https://travel-info-api.p.rapidapi.com/find-embassy?source=\(source)&destination=brazil") else { return }
         
         let headers = [
             "X-RapidAPI-Key": "05b4860263msh7862a91faa2cf04p172101jsna1a12ae8d7d0",

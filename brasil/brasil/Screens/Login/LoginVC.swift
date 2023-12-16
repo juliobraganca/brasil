@@ -20,7 +20,8 @@ class LoginVC: UIViewController {
     
     
     @IBAction func tappedLoginButton(_ sender: UIButton) {
-        self.navigationController?.pushViewController(HomeVC(), animated: true)
+        let homeVC = UIStoryboard(name: "HomeVC", bundle: nil).instantiateViewController(withIdentifier: "HomeVC") as? HomeVC
+        self.navigationController?.pushViewController(homeVC ?? UIViewController(), animated: true)
     }
     
 }

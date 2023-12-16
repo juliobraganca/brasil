@@ -21,10 +21,10 @@
 		36FF11232B2DC79800187EA2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF11222B2DC79800187EA2 /* TabBarController.swift */; };
 		36FF11272B2DC7F900187EA2 /* ActivitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF11262B2DC7F900187EA2 /* ActivitiesVC.swift */; };
 		36FF11292B2DC80600187EA2 /* EmbassyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF11282B2DC80600187EA2 /* EmbassyVC.swift */; };
-		36FF112C2B2DC8AC00187EA2 /* ActivitiesVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36FF112B2B2DC8AC00187EA2 /* ActivitiesVC.storyboard */; };
 		36FF112E2B2DC8B600187EA2 /* EmbassyVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36FF112D2B2DC8B600187EA2 /* EmbassyVC.storyboard */; };
 		36FF11312B2DC96900187EA2 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF11302B2DC96900187EA2 /* LoginVC.swift */; };
 		36FF11332B2DC99C00187EA2 /* HomeVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36FF11322B2DC99C00187EA2 /* HomeVC.storyboard */; };
+		36FF11362B2DD14800187EA2 /* ActivitiesVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36FF11352B2DD14800187EA2 /* ActivitiesVC.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,10 +44,10 @@
 		36FF11222B2DC79800187EA2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		36FF11262B2DC7F900187EA2 /* ActivitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesVC.swift; sourceTree = "<group>"; };
 		36FF11282B2DC80600187EA2 /* EmbassyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbassyVC.swift; sourceTree = "<group>"; };
-		36FF112B2B2DC8AC00187EA2 /* ActivitiesVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActivitiesVC.storyboard; sourceTree = "<group>"; };
 		36FF112D2B2DC8B600187EA2 /* EmbassyVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmbassyVC.storyboard; sourceTree = "<group>"; };
 		36FF11302B2DC96900187EA2 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		36FF11322B2DC99C00187EA2 /* HomeVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeVC.storyboard; sourceTree = "<group>"; };
+		36FF11352B2DD14800187EA2 /* ActivitiesVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActivitiesVC.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +159,7 @@
 		36FF11242B2DC7C500187EA2 /* EmbassyVC */ = {
 			isa = PBXGroup;
 			children = (
+				36FF11372B2DDE1100187EA2 /* New Group */,
 				36FF11282B2DC80600187EA2 /* EmbassyVC.swift */,
 				36FF112D2B2DC8B600187EA2 /* EmbassyVC.storyboard */,
 			);
@@ -169,7 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				36FF11262B2DC7F900187EA2 /* ActivitiesVC.swift */,
-				36FF112B2B2DC8AC00187EA2 /* ActivitiesVC.storyboard */,
+				36FF11352B2DD14800187EA2 /* ActivitiesVC.storyboard */,
 			);
 			path = ActivitiesVC;
 			sourceTree = "<group>";
@@ -181,6 +182,13 @@
 				36FF11302B2DC96900187EA2 /* LoginVC.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		36FF11372B2DDE1100187EA2 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +235,8 @@
 				Base,
 			);
 			mainGroup = 36FF10F02B2DC2D800187EA2;
+			packageReferences = (
+			);
 			productRefGroup = 36FF10FA2B2DC2D800187EA2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -241,11 +251,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36FF112C2B2DC8AC00187EA2 /* ActivitiesVC.storyboard in Resources */,
 				36FF11092B2DC2D900187EA2 /* LaunchScreen.storyboard in Resources */,
 				36FF11062B2DC2D900187EA2 /* Assets.xcassets in Resources */,
 				36FF11042B2DC2D800187EA2 /* Main.storyboard in Resources */,
 				36FF11332B2DC99C00187EA2 /* HomeVC.storyboard in Resources */,
+				36FF11362B2DD14800187EA2 /* ActivitiesVC.storyboard in Resources */,
 				36FF112E2B2DC8B600187EA2 /* EmbassyVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
