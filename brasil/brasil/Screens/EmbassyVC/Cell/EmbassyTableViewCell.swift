@@ -27,6 +27,7 @@ class EmbassyTableViewCell: UITableViewCell {
 
     public func setupCell(data: EmbassyAbroadDetail) {
         addressLabel.text = "Address: \(data.address)"
+        addressLabel.font = UIFont.boldSystemFont(ofSize: 18)
         phoneLabel.text = "Phone: \(data.phone)"
     }
     

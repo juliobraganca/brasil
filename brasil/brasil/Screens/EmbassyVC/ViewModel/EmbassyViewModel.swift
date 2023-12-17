@@ -14,13 +14,12 @@ protocol EmbassyViewModelProtocol: AnyObject {
 
 class EmbassyViewModel {
     
-    private var listEmbassyAbroadDetail: [EmbassyAbroadDetail] = []
     private var embassy: EmbassyAbroad?
     private var service: EmbassyService = EmbassyService()
     weak var delegate: EmbassyViewModelProtocol?
     
     func fetchEmbassyAbroad(source: String) {
-        service.getEmbassyAbroadURLSession() { result in
+        service.getEmbassyAbroadURLSession(source: source) { result in
             switch result {
             case .success(let success):
                 print(success)

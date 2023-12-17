@@ -11,11 +11,16 @@ class EmbassyVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var viewModel: EmbassyViewModel = EmbassyViewModel()
+    var homeVC: HomeVC = HomeVC()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "List of Embassies"
+        title = "Embassies"
         viewModel.delegate = self
+//        viewModel.fetchEmbassyAbroad(source: "usa")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         viewModel.fetchEmbassyAbroad(source: "usa")
     }
     

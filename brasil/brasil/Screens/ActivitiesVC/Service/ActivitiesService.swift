@@ -1,5 +1,5 @@
 //
-//  EmbassyService.swift
+//  ActivitiesService.swift
 //  brasil
 //
 //  Created by Julio Braganca on 17/12/23.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-class EmbassyService {
-    func getEmbassyAbroadURLSession(source: String, completion: @escaping (Result<EmbassyAbroad, Error>) -> Void) {
-        guard let url = URL(string: "https://travel-info-api.p.rapidapi.com/find-embassy?source=\(source)&destination=brazil") else { return }
+class ActivitiesService {
+    func getCountryActivitiesURLSession(completion: @escaping (Result<CountryActivities, Error>) -> Void) {
+        guard let url = URL(string: "https://travel-info-api.p.rapidapi.com/country-activities?country=brazil") else { return }
         
         let headers = [
             "X-RapidAPI-Key": "05b4860263msh7862a91faa2cf04p172101jsna1a12ae8d7d0",
@@ -28,8 +28,8 @@ class EmbassyService {
             
             if response.statusCode == 200 {
                 do {
-                    let embassyAbroad: EmbassyAbroad = try JSONDecoder().decode(EmbassyAbroad.self, from: dataResult)
-                    completion(.success(embassyAbroad))
+                    let countryActivities: CountryActivities = try JSONDecoder().decode(CountryActivities.self, from: dataResult)
+                    completion(.success(countryActivities))
                 } catch {
                     completion(.failure(error))
                 }
@@ -40,5 +40,3 @@ class EmbassyService {
         task.resume()
     }
 }
-
-

@@ -26,7 +26,7 @@ class LoginVC: UIViewController {
         
         let activitiesVC = UIStoryboard(name: "ActivitiesVC", bundle: nil).instantiateViewController(withIdentifier: "ActivitiesVC") as? ActivitiesVC
         
-        self.navigationController?.pushViewController(embassyVC ?? UIViewController(), animated: true)
+        self.navigationController?.pushViewController(TabBarController(), animated: true)
     }
     
 }

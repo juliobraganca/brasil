@@ -25,8 +25,6 @@ class HomeVC: UIViewController {
     
     @IBOutlet weak var saveInformationButton: UIButton!
     
-    var embassyService = EmbassyService()
-    
     var welcomeText = "" {
         didSet {
             welcomeLabel.text = "Welcome to Brazil, \(welcomeText)"
