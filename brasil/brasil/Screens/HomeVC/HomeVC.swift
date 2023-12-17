@@ -25,13 +25,15 @@ class HomeVC: UIViewController {
     
     @IBOutlet weak var saveInformationButton: UIButton!
     
-    var countryViewModel : CountryViewModel()
+    var embassyService = EmbassyService()
     
     var welcomeText = "" {
         didSet {
             welcomeLabel.text = "Welcome to Brazil, \(welcomeText)"
         }
     }
+    
+    var embassyCountry = "usa"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,7 +61,6 @@ class HomeVC: UIViewController {
         editInformationButton.isHidden = false
         saveInformationButton.isHidden = true
         welcomeText = nameTextField.text ?? ""
-        countryViewModel.fetchEmbassyAbroad(source: countryTextField.text ?? "")
     }
         
     

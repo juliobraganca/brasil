@@ -7,25 +7,13 @@
 
 import UIKit
 
-class CountryViewModel {
+class CountryFetch {
     
     var listEmbassyAbroadDetail: [EmbassyAbroadDetail] = []
     var activities: [Activity] = []
     var countryBriefData: CountryBriefData?
     
     private var service: CountryService = CountryService()
-    
-    func fetchEmbassyAbroad(source: String) {
-        service.getEmbassyAbroadURLSession(source: source) { result in
-            switch result {
-            case .success(let success):
-                print(success)
-                self.listEmbassyAbroadDetail = success.data ?? []
-            case .failure(let failure):
-                print(failure.localizedDescription)
-            }
-        }
-    }
     
     func fetchCountryActivities() {
         service.getCountryActivitiesURLSession { result in

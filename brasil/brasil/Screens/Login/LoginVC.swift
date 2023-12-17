@@ -21,7 +21,12 @@ class LoginVC: UIViewController {
     
     @IBAction func tappedLoginButton(_ sender: UIButton) {
         let homeVC = UIStoryboard(name: "HomeVC", bundle: nil).instantiateViewController(withIdentifier: "HomeVC") as? HomeVC
-        self.navigationController?.pushViewController(homeVC ?? UIViewController(), animated: true)
+        
+        let embassyVC = UIStoryboard(name: "EmbassyVC", bundle: nil).instantiateViewController(withIdentifier: "EmbassyVC") as? EmbassyVC
+        
+        let activitiesVC = UIStoryboard(name: "ActivitiesVC", bundle: nil).instantiateViewController(withIdentifier: "ActivitiesVC") as? ActivitiesVC
+        
+        self.navigationController?.pushViewController(embassyVC ?? UIViewController(), animated: true)
     }
     
 }
