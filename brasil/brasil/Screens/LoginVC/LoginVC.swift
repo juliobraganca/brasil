@@ -36,6 +36,10 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         
     }
     
+    @IBAction func tappedForgotPasswordButton(_ sender: UIButton) {
+        let forgotPasswordScreen = UIStoryboard(name: "ForgotPasswordVC", bundle: nil).instantiateViewController(withIdentifier: "ForgotPasswordVC") as? ForgotPasswordVC
+        navigationController?.pushViewController(forgotPasswordScreen ?? UIViewController(), animated: true)
+    }
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
         let registerScreen = UIStoryboard(name: "RegisterVC", bundle: nil).instantiateViewController(withIdentifier: "RegisterVC") as? RegisterVC
