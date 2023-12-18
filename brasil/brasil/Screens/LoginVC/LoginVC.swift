@@ -61,7 +61,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         accountLabel.text = "Don't have an account?"
         
         registerButton.setTitle("Sign in", for: .normal)
-      
+        
         forgotPasswordButton.setTitle("forgot Password?", for: .normal)
         
         loginButton.setTitle("Login", for: .normal)
