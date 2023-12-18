@@ -30,6 +30,8 @@
 		36FF11472B2F497000187EA2 /* ActivitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF11462B2F497000187EA2 /* ActivitiesViewModel.swift */; };
 		36FF114B2B2F4A2B00187EA2 /* ActivitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF11492B2F4A2B00187EA2 /* ActivitiesTableViewCell.swift */; };
 		36FF114C2B2F4A2B00187EA2 /* ActivitiesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36FF114A2B2F4A2B00187EA2 /* ActivitiesTableViewCell.xib */; };
+		D6829BC62B2FF2FD005FDC15 /* RegisterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6829BC52B2FF2FD005FDC15 /* RegisterVC.storyboard */; };
+		D6829BCA2B2FF3D2005FDC15 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6829BC92B2FF3D2005FDC15 /* RegisterVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		36FF11462B2F497000187EA2 /* ActivitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewModel.swift; sourceTree = "<group>"; };
 		36FF11492B2F4A2B00187EA2 /* ActivitiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewCell.swift; sourceTree = "<group>"; };
 		36FF114A2B2F4A2B00187EA2 /* ActivitiesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesTableViewCell.xib; sourceTree = "<group>"; };
+		D6829BC52B2FF2FD005FDC15 /* RegisterVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterVC.storyboard; sourceTree = "<group>"; };
+		D6829BC92B2FF3D2005FDC15 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,7 @@
 			children = (
 				36FF11222B2DC79800187EA2 /* TabBarController.swift */,
 				36FF112F2B2DC95000187EA2 /* LoginVC */,
+				D6829BC42B2FF2A4005FDC15 /* RegisterVC */,
 				36FF11112B2DC34600187EA2 /* HomeVC */,
 				36FF11252B2DC7CE00187EA2 /* ActivitiesVC */,
 				36FF11242B2DC7C500187EA2 /* EmbassyVC */,
@@ -222,6 +227,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		D6829BC42B2FF2A4005FDC15 /* RegisterVC */ = {
+			isa = PBXGroup;
+			children = (
+				D6829BC52B2FF2FD005FDC15 /* RegisterVC.storyboard */,
+				D6829BC92B2FF3D2005FDC15 /* RegisterVC.swift */,
+			);
+			path = RegisterVC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -285,6 +299,7 @@
 				36FF11092B2DC2D900187EA2 /* LaunchScreen.storyboard in Resources */,
 				36FF11062B2DC2D900187EA2 /* Assets.xcassets in Resources */,
 				36FF11042B2DC2D800187EA2 /* Main.storyboard in Resources */,
+				D6829BC62B2FF2FD005FDC15 /* RegisterVC.storyboard in Resources */,
 				36FF11332B2DC99C00187EA2 /* HomeVC.storyboard in Resources */,
 				36FF114C2B2F4A2B00187EA2 /* ActivitiesTableViewCell.xib in Resources */,
 				36FF113B2B2DE0CE00187EA2 /* EmbassyTableViewCell.xib in Resources */,
@@ -309,6 +324,7 @@
 				36FF11412B2F403400187EA2 /* EmbassyService.swift in Sources */,
 				36FF11452B2F496500187EA2 /* ActivitiesService.swift in Sources */,
 				36FF11162B2DC48500187EA2 /* CountryActivities.swift in Sources */,
+				D6829BCA2B2FF3D2005FDC15 /* RegisterVC.swift in Sources */,
 				36FF10FF2B2DC2D800187EA2 /* SceneDelegate.swift in Sources */,
 				36FF11272B2DC7F900187EA2 /* ActivitiesVC.swift in Sources */,
 				36FF113A2B2DE0CE00187EA2 /* EmbassyTableViewCell.swift in Sources */,
