@@ -19,7 +19,14 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var orLabel: UILabel!
     
+    @IBOutlet weak var accountLabel: UILabel!
+    
     @IBOutlet weak var gmailLoginButton: UIButton!
+    
+    @IBOutlet weak var facebookLoginButton: UIButton!
+    
+    @IBOutlet weak var registerButton: UIButton!
+    
     
     
     
@@ -49,9 +56,12 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         passwordTextField.delegate = self
         passwordTextField.isSecureTextEntry = true
         
-        //        registerButton.setTitle("Cadastre-se", for: .normal)
-        //        registerButton.setTitleColor(UIColor.black, for: .normal)
-        //
+        orLabel.text = "or"
+        
+        accountLabel.text = "Don't have an account?"
+        
+        registerButton.setTitle("Sign in", for: .normal)
+      
         forgotPasswordButton.setTitle("forgot Password?", for: .normal)
         
         loginButton.setTitle("Login", for: .normal)
