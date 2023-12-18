@@ -26,7 +26,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         configElements()
-
+        
     }
     
     
@@ -49,12 +49,23 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         passwordTextField.delegate = self
         passwordTextField.isSecureTextEntry = true
         
-//        registerButton.setTitle("Cadastre-se", for: .normal)
-//        registerButton.setTitleColor(UIColor.black, for: .normal)
-//        
+        //        registerButton.setTitle("Cadastre-se", for: .normal)
+        //        registerButton.setTitleColor(UIColor.black, for: .normal)
+        //
         forgotPasswordButton.setTitle("forgot Password?", for: .normal)
         
         loginButton.setTitle("Login", for: .normal)
         
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.layer.borderWidth = 1.0
+        textField.layer.borderColor = UIColor.systemBlue.cgColor
+        
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.layer.borderWidth = 0
+        textField.layer.borderColor = UIColor.gray.cgColor
     }
 }
