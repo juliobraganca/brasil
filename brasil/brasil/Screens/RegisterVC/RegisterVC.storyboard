@@ -71,6 +71,14 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wdM-SG-Lpm" secondAttribute="trailing" constant="30" id="yEF-c8-3rv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="createAccountLabel" destination="2MB-QU-O50" id="Vw7-kR-Xj1"/>
+                        <outlet property="emailTextField" destination="mxk-um-df0" id="RxW-zA-zZr"/>
+                        <outlet property="nacionalityTextField" destination="wdM-SG-Lpm" id="uKe-Kb-oMh"/>
+                        <outlet property="nameTextField" destination="L06-KR-9Ue" id="atW-ss-OTP"/>
+                        <outlet property="passwordTextField" destination="ry3-q3-SpR" id="Zoo-ke-6jA"/>
+                        <outlet property="registerButton" destination="dWw-fg-ouK" id="AgJ-al-oAG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
