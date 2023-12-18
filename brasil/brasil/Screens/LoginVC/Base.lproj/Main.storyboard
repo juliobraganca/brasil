@@ -40,45 +40,52 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Login"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xyn-fC-vNs">
-                                <rect key="frame" x="30" y="511" width="333" height="21"/>
+                                <rect key="frame" x="30" y="501" width="333" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6h3-Mz-3fd">
-                                <rect key="frame" x="30" y="562" width="75" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHD-Fx-ky4">
+                                <rect key="frame" x="233" y="542" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="MJC-DO-Bpu"/>
+                                    <constraint firstAttribute="width" constant="60" id="YyE-zS-Opb"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="facebookLogin"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHD-Fx-ky4">
-                                <rect key="frame" x="288" y="562" width="75" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6h3-Mz-3fd">
+                                <rect key="frame" x="100" y="542" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="FRV-je-Lbe"/>
+                                    <constraint firstAttribute="height" constant="60" id="IAA-Ev-iQO"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="gmailLogin"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Xyn-fC-vNs" firstAttribute="top" secondItem="RFd-lg-M9k" secondAttribute="bottom" constant="40" id="2ie-Tv-sOd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YHD-Fx-ky4" secondAttribute="trailing" constant="100" id="1cH-mV-AHJ"/>
+                            <constraint firstItem="Xyn-fC-vNs" firstAttribute="top" secondItem="RFd-lg-M9k" secondAttribute="bottom" constant="30" id="2ie-Tv-sOd"/>
                             <constraint firstItem="1Pe-qm-EYs" firstAttribute="top" secondItem="fVk-hc-muv" secondAttribute="bottom" constant="10" id="4Am-ls-Lfv"/>
-                            <constraint firstItem="YHD-Fx-ky4" firstAttribute="top" secondItem="Xyn-fC-vNs" secondAttribute="bottom" constant="30" id="8g2-qX-egg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3sp-Yz-r4P" secondAttribute="trailing" constant="30" id="Avf-u3-wvZ"/>
-                            <constraint firstItem="6h3-Mz-3fd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="NRF-qb-ZB8"/>
-                            <constraint firstItem="YHD-Fx-ky4" firstAttribute="leading" secondItem="6h3-Mz-3fd" secondAttribute="trailing" constant="183" id="RVC-XJ-8TS"/>
+                            <constraint firstItem="6h3-Mz-3fd" firstAttribute="top" secondItem="Xyn-fC-vNs" secondAttribute="bottom" constant="20" id="Nf4-jY-XF0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xyn-fC-vNs" secondAttribute="trailing" constant="30" id="U4g-y6-IVF"/>
                             <constraint firstItem="3sp-Yz-r4P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="WzC-tg-gzh"/>
+                            <constraint firstItem="YHD-Fx-ky4" firstAttribute="top" secondItem="Xyn-fC-vNs" secondAttribute="bottom" constant="20" id="bAD-MS-L1c"/>
                             <constraint firstItem="RFd-lg-M9k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="gWS-a6-YTI"/>
                             <constraint firstItem="1Pe-qm-EYs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="jtn-pu-Q8W"/>
                             <constraint firstItem="3sp-Yz-r4P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="160" id="mE4-VO-Ike"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fVk-hc-muv" secondAttribute="trailing" constant="30" id="nFF-hT-dBM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Pe-qm-EYs" secondAttribute="trailing" constant="30" id="nZx-8D-u2f"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YHD-Fx-ky4" secondAttribute="trailing" constant="30" id="omk-lG-mWa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RFd-lg-M9k" secondAttribute="trailing" constant="30" id="pmM-gg-G6Q"/>
                             <constraint firstItem="fVk-hc-muv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="uBq-ql-0po"/>
-                            <constraint firstItem="6h3-Mz-3fd" firstAttribute="top" secondItem="Xyn-fC-vNs" secondAttribute="bottom" constant="30" id="ucf-Ka-fEV"/>
                             <constraint firstItem="Xyn-fC-vNs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ucn-GO-Nht"/>
                             <constraint firstItem="fVk-hc-muv" firstAttribute="top" secondItem="3sp-Yz-r4P" secondAttribute="bottom" constant="40" id="ukZ-JW-ebE"/>
                             <constraint firstItem="RFd-lg-M9k" firstAttribute="top" secondItem="1Pe-qm-EYs" secondAttribute="bottom" constant="20" id="xHz-Qx-fTF"/>
+                            <constraint firstItem="6h3-Mz-3fd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="zhY-gs-8Zw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9Hm-Fk-YRf"/>
@@ -115,6 +122,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="facebookLogin" width="126" height="126"/>
+        <image name="gmailLogin" width="126" height="126"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
