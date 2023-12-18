@@ -32,7 +32,7 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
         nameTextField.placeholder = "Your full name"
         nameTextField.delegate = self
         
-        nacionalityTextField.placeholder = "Your full name"
+        nacionalityTextField.placeholder = "Your nacionality"
         nacionalityTextField.delegate = self
         
         emailTextField.placeholder = "Your e-mail Address"

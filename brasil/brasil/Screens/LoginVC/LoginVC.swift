@@ -37,6 +37,11 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     }
     
     
+    @IBAction func tappedRegisterButton(_ sender: UIButton) {
+        let registerScreen = UIStoryboard(name: "RegisterVC", bundle: nil).instantiateViewController(withIdentifier: "RegisterVC") as? RegisterVC
+        navigationController?.pushViewController(registerScreen ?? UIViewController(), animated: true)
+    }
+    
     @IBAction func tappedLoginButton(_ sender: UIButton) {
         let homeVC = UIStoryboard(name: "HomeVC", bundle: nil).instantiateViewController(withIdentifier: "HomeVC") as? HomeVC
         
@@ -48,7 +53,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     }
     
     func configElements() {
-        emailTextField.placeholder = "E-mail Adress"
+        emailTextField.placeholder = "E-mail Address"
         emailTextField.keyboardType = .emailAddress
         emailTextField.delegate = self
         
@@ -60,7 +65,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         
         accountLabel.text = "Don't have an account?"
         
-        registerButton.setTitle("Sign in", for: .normal)
+        registerButton.setTitle("Sign up", for: .normal)
         
         forgotPasswordButton.setTitle("forgot Password?", for: .normal)
         
