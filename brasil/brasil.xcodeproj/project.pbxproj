@@ -30,6 +30,8 @@
 		36FF11472B2F497000187EA2 /* ActivitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF11462B2F497000187EA2 /* ActivitiesViewModel.swift */; };
 		36FF114B2B2F4A2B00187EA2 /* ActivitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF11492B2F4A2B00187EA2 /* ActivitiesTableViewCell.swift */; };
 		36FF114C2B2F4A2B00187EA2 /* ActivitiesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36FF114A2B2F4A2B00187EA2 /* ActivitiesTableViewCell.xib */; };
+		D63441352B30889300B98F50 /* ForgotPasswordVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63441342B30889300B98F50 /* ForgotPasswordVC.storyboard */; };
+		D63441392B30894100B98F50 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63441382B30894100B98F50 /* ForgotPasswordVC.swift */; };
 		D6829BC62B2FF2FD005FDC15 /* RegisterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6829BC52B2FF2FD005FDC15 /* RegisterVC.storyboard */; };
 		D6829BCA2B2FF3D2005FDC15 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6829BC92B2FF3D2005FDC15 /* RegisterVC.swift */; };
 /* End PBXBuildFile section */
@@ -60,6 +62,8 @@
 		36FF11462B2F497000187EA2 /* ActivitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewModel.swift; sourceTree = "<group>"; };
 		36FF11492B2F4A2B00187EA2 /* ActivitiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewCell.swift; sourceTree = "<group>"; };
 		36FF114A2B2F4A2B00187EA2 /* ActivitiesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesTableViewCell.xib; sourceTree = "<group>"; };
+		D63441342B30889300B98F50 /* ForgotPasswordVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPasswordVC.storyboard; sourceTree = "<group>"; };
+		D63441382B30894100B98F50 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		D6829BC52B2FF2FD005FDC15 /* RegisterVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterVC.storyboard; sourceTree = "<group>"; };
 		D6829BC92B2FF3D2005FDC15 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +138,7 @@
 		36FF11212B2DC77500187EA2 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D63441332B30886F00B98F50 /* ForgotPasswordVC */,
 				36FF11222B2DC79800187EA2 /* TabBarController.swift */,
 				36FF112F2B2DC95000187EA2 /* LoginVC */,
 				D6829BC42B2FF2A4005FDC15 /* RegisterVC */,
@@ -227,6 +232,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		D63441332B30886F00B98F50 /* ForgotPasswordVC */ = {
+			isa = PBXGroup;
+			children = (
+				D63441342B30889300B98F50 /* ForgotPasswordVC.storyboard */,
+				D63441382B30894100B98F50 /* ForgotPasswordVC.swift */,
+			);
+			path = ForgotPasswordVC;
+			sourceTree = "<group>";
+		};
 		D6829BC42B2FF2A4005FDC15 /* RegisterVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +317,7 @@
 				36FF11332B2DC99C00187EA2 /* HomeVC.storyboard in Resources */,
 				36FF114C2B2F4A2B00187EA2 /* ActivitiesTableViewCell.xib in Resources */,
 				36FF113B2B2DE0CE00187EA2 /* EmbassyTableViewCell.xib in Resources */,
+				D63441352B30889300B98F50 /* ForgotPasswordVC.storyboard in Resources */,
 				36FF11362B2DD14800187EA2 /* ActivitiesVC.storyboard in Resources */,
 				36FF112E2B2DC8B600187EA2 /* EmbassyVC.storyboard in Resources */,
 			);
@@ -321,6 +336,7 @@
 				36FF11292B2DC80600187EA2 /* EmbassyVC.swift in Sources */,
 				36FF11232B2DC79800187EA2 /* TabBarController.swift in Sources */,
 				36FF10FD2B2DC2D800187EA2 /* AppDelegate.swift in Sources */,
+				D63441392B30894100B98F50 /* ForgotPasswordVC.swift in Sources */,
 				36FF11412B2F403400187EA2 /* EmbassyService.swift in Sources */,
 				36FF11452B2F496500187EA2 /* ActivitiesService.swift in Sources */,
 				36FF11162B2DC48500187EA2 /* CountryActivities.swift in Sources */,
