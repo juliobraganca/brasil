@@ -83,7 +83,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="9Hm-Fk-YRf"/>
                     <connections>
-                        <outlet property="loginButton" destination="1Pe-qm-EYs" id="kRz-Z6-PRw"/>
+                        <outlet property="emailTextField" destination="3sp-Yz-r4P" id="5nP-8I-LHs"/>
+                        <outlet property="forgotPasswordButton" destination="1Pe-qm-EYs" id="RO9-S7-cDI"/>
+                        <outlet property="gmailLoginButton" destination="6h3-Mz-3fd" id="jtF-01-pag"/>
+                        <outlet property="loginButton" destination="RFd-lg-M9k" id="eHb-fJ-5cC"/>
+                        <outlet property="orLabel" destination="Xyn-fC-vNs" id="vtQ-eV-TVH"/>
+                        <outlet property="passwordTextField" destination="fVk-hc-muv" id="mzy-QI-Gjb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
