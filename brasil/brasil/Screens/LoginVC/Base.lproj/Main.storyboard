@@ -161,7 +161,7 @@
     <resources>
         <image name="facebookLogin" width="126" height="126"/>
         <image name="gmailLogin" width="126" height="126"/>
-        <image name="logoGrinGO" width="2108" height="613"/>
+        <image name="logoGrinGO" width="1447" height="421"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

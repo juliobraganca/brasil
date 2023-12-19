@@ -47,18 +47,11 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Register"/>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoGrinGO" translatesAutoresizingMaskIntoConstraints="NO" id="45y-w7-15y">
-                                <rect key="frame" x="90" y="481" width="213" height="30"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gringoDupla" translatesAutoresizingMaskIntoConstraints="NO" id="FxQ-G9-fLQ">
+                                <rect key="frame" x="50" y="471" width="293" height="180"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="59o-Qm-dE0"/>
-                                    <constraint firstAttribute="width" constant="213" id="xek-TY-ZNM"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gringoDupla" translatesAutoresizingMaskIntoConstraints="NO" id="CTY-7M-RIV">
-                                <rect key="frame" x="72.666666666666686" y="521" width="248" height="120"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="248" id="umV-mV-srE"/>
-                                    <constraint firstAttribute="height" constant="120" id="w1N-tc-9NM"/>
+                                    <constraint firstAttribute="height" constant="180" id="FuP-0K-lJ6"/>
+                                    <constraint firstAttribute="width" constant="293" id="cc9-F7-wLB"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -66,13 +59,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2MB-QU-O50" secondAttribute="trailing" constant="30" id="03z-8E-kxs"/>
-                            <constraint firstItem="45y-w7-15y" firstAttribute="top" secondItem="dWw-fg-ouK" secondAttribute="bottom" constant="40" id="EW2-G8-lWC"/>
-                            <constraint firstItem="45y-w7-15y" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Ism-Pf-1Uc"/>
+                            <constraint firstItem="FxQ-G9-fLQ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="HlB-mV-06D"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ry3-q3-SpR" secondAttribute="trailing" constant="30" id="Ock-2w-KpQ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="L06-KR-9Ue" secondAttribute="trailing" constant="30" id="OrS-EP-8Do"/>
                             <constraint firstItem="2MB-QU-O50" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="Q6h-Y9-UAJ"/>
                             <constraint firstItem="mxk-um-df0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="R6K-0U-QKW"/>
-                            <constraint firstItem="CTY-7M-RIV" firstAttribute="top" secondItem="45y-w7-15y" secondAttribute="bottom" constant="10" id="SQg-9D-zQ1"/>
                             <constraint firstItem="L06-KR-9Ue" firstAttribute="top" secondItem="2MB-QU-O50" secondAttribute="bottom" constant="40" id="Vfy-KL-Ppw"/>
                             <constraint firstItem="ry3-q3-SpR" firstAttribute="top" secondItem="mxk-um-df0" secondAttribute="bottom" constant="30" id="WAP-QX-HC1"/>
                             <constraint firstItem="2MB-QU-O50" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="Zmo-eV-Jxs"/>
@@ -82,8 +73,8 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mxk-um-df0" secondAttribute="trailing" constant="30" id="eCJ-pp-k7Z"/>
                             <constraint firstItem="wdM-SG-Lpm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="fTy-G3-pAg"/>
                             <constraint firstItem="ry3-q3-SpR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="g5A-2d-PW7"/>
-                            <constraint firstItem="CTY-7M-RIV" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="gM9-We-c9z"/>
                             <constraint firstItem="L06-KR-9Ue" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="lNP-CT-9eI"/>
+                            <constraint firstItem="FxQ-G9-fLQ" firstAttribute="top" secondItem="dWw-fg-ouK" secondAttribute="bottom" constant="30" id="nZD-AL-9OP"/>
                             <constraint firstItem="dWw-fg-ouK" firstAttribute="top" secondItem="ry3-q3-SpR" secondAttribute="bottom" constant="40" id="oQd-j8-cJG"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dWw-fg-ouK" secondAttribute="trailing" constant="30" id="otp-tA-jRO"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wdM-SG-Lpm" secondAttribute="trailing" constant="30" id="yEF-c8-3rv"/>
@@ -104,8 +95,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="gringoDupla" width="1661" height="1298"/>
-        <image name="logoGrinGO" width="2108" height="613"/>
+        <image name="gringoDupla" width="1661" height="1794"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
