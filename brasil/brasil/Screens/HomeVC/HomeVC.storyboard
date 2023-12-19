@@ -17,25 +17,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Brazil! " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdI-Mw-tVQ">
-                                <rect key="frame" x="30" y="79" width="333" height="21"/>
+                                <rect key="frame" x="30" y="59" width="333" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert your country bellow to get information about embassy in Brazil" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6O-W2-8q6">
-                                <rect key="frame" x="29" y="120.00000000000001" width="333" height="40.666666666666671"/>
+                                <rect key="frame" x="29" y="90" width="333" height="40.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xg8-rK-vZJ">
-                                <rect key="frame" x="30" y="160.66666666666663" width="333" height="216"/>
+                                <rect key="frame" x="30" y="130.66666666666666" width="333" height="215.99999999999997"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHt-dY-zVh">
-                                <rect key="frame" x="30" y="386.66666666666669" width="333" height="35"/>
+                                <rect key="frame" x="30" y="346.66666666666669" width="333" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Enter"/>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brasilGringo" translatesAutoresizingMaskIntoConstraints="NO" id="Ih8-TA-rkS">
+                                <rect key="frame" x="62" y="401.66666666666669" width="269" height="143.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="269" id="Egk-Bf-Nof"/>
+                                    <constraint firstAttribute="height" constant="143" id="trF-Ka-HNP"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -45,13 +52,15 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="IHt-dY-zVh" secondAttribute="trailing" constant="30" id="BRD-1T-UG8"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xg8-rK-vZJ" secondAttribute="trailing" constant="30" id="Dr1-1w-cKv"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="vdI-Mw-tVQ" secondAttribute="trailing" constant="30" id="E9S-lt-2bx"/>
-                            <constraint firstItem="vdI-Mw-tVQ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="Iz3-40-OEC"/>
-                            <constraint firstItem="IHt-dY-zVh" firstAttribute="top" secondItem="xg8-rK-vZJ" secondAttribute="bottom" constant="10" id="TYg-Id-efv"/>
-                            <constraint firstItem="M6O-W2-8q6" firstAttribute="top" secondItem="vdI-Mw-tVQ" secondAttribute="bottom" constant="20" id="UrK-ks-PSz"/>
+                            <constraint firstItem="Ih8-TA-rkS" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="G1L-p5-uz2"/>
+                            <constraint firstItem="vdI-Mw-tVQ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Iz3-40-OEC"/>
+                            <constraint firstItem="IHt-dY-zVh" firstAttribute="top" secondItem="xg8-rK-vZJ" secondAttribute="bottom" id="TYg-Id-efv"/>
+                            <constraint firstItem="M6O-W2-8q6" firstAttribute="top" secondItem="vdI-Mw-tVQ" secondAttribute="bottom" constant="10" id="UrK-ks-PSz"/>
                             <constraint firstItem="M6O-W2-8q6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="29" id="bzO-Gn-n4n"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="M6O-W2-8q6" secondAttribute="trailing" constant="31" id="cIn-59-Sr0"/>
                             <constraint firstItem="xg8-rK-vZJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="iho-oa-aKY"/>
                             <constraint firstItem="IHt-dY-zVh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="l2J-YM-1aT"/>
+                            <constraint firstItem="Ih8-TA-rkS" firstAttribute="top" secondItem="IHt-dY-zVh" secondAttribute="bottom" constant="20" id="stt-kK-LyG"/>
                         </constraints>
                     </view>
                     <connections>
@@ -67,6 +76,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="brasilGringo" width="3047" height="2829"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
