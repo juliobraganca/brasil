@@ -34,6 +34,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     var auth: Auth?
     let LoginFacebookButton = FBLoginButton(frame: .zero)
+    var alert: Alert?
     
     private var viewmodel: LoginViewModel = LoginViewModel()
     
@@ -41,6 +42,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.auth = Auth.auth()
         configElements()
+        self.alert = Alert(controller: self)
         
     }
     
@@ -50,11 +52,9 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
-        
-        
-                let registerScreen = UIStoryboard(name: "RegisterVC", bundle: nil).instantiateViewController(withIdentifier: "RegisterVC") as? RegisterVC
-                navigationController?.pushViewController(registerScreen ?? UIViewController(), animated: true)
-            }
+        let registerScreen = UIStoryboard(name: "RegisterVC", bundle: nil).instantiateViewController(withIdentifier: "RegisterVC") as? RegisterVC
+        navigationController?.pushViewController(registerScreen ?? UIViewController(), animated: true)
+    }
     
     @IBAction func tappedLoginButton(_ sender: UIButton) {
         guard let email = emailTextField.text, let password = passwordTextField.text else {
@@ -65,25 +65,22 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             if success {
                 self.navigationController?.pushViewController(TabBarController(), animated: true)
             } else {
-                print("Deu ruim!")
+                self.alert?.getAlert(title: AlertStrings.atention.rawValue, message: AlertStrings.errorlogin.rawValue)
             }
         }
     }
     
     @IBAction func tappedGmailLogin(_ sender: Any) {
-        
         viewmodel.signInWithGoogle(presentingViewController: self) { success in
             if success {
                 DispatchQueue.main.async {
                     self.navigationController?.pushViewController(TabBarController(), animated: true)
                 }
             } else {
-                print("falha ao autenticar")
+                self.alert?.getAlert(title: AlertStrings.atention.rawValue, message: AlertStrings.cancelLoginGoogle.rawValue)
             }
         }
     }
-    
-    
     
     @IBAction func tappedFacebookLoginButton(_ sender: Any) {
         
@@ -92,7 +89,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         LoginFacebookButton.sendActions(for: .touchUpInside)
     }
     
-
+    
     func configElements() {
         emailTextField.placeholder = "E-mail Address"
         emailTextField.keyboardType = .emailAddress
@@ -131,10 +128,10 @@ extension LoginVC: LoginButtonDelegate {
     
     func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
         if error != nil {
-            print("showAllert(title: Atencão, message: Erro ao logar com facebook)")
+            self.alert?.getAlert(title: AlertStrings.atention.rawValue, message: AlertStrings.errorlogin.rawValue)
             
         } else if result?.isCancelled == true {
-            print(" showAllert(title: Atencão, message: Você cancelou o acesso pelo facebook")
+            self.alert?.getAlert(title: AlertStrings.atention.rawValue, message: AlertStrings.cancelLoginFacebook.rawValue)
             
         } else {
             self.navigationController?.pushViewController(TabBarController(), animated: true)

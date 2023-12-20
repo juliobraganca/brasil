@@ -39,6 +39,7 @@
 		A0C682DE2B335AD100760359 /* FacebookBasics in Frameworks */ = {isa = PBXBuildFile; productRef = A0C682DD2B335AD100760359 /* FacebookBasics */; };
 		A0C682E02B335AD100760359 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = A0C682DF2B335AD100760359 /* FacebookCore */; };
 		A0C682E22B335AD100760359 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = A0C682E12B335AD100760359 /* FacebookLogin */; };
+		A0C682E52B33624E00760359 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C682E42B33624E00760359 /* Alert.swift */; };
 		D63441352B30889300B98F50 /* ForgotPasswordVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63441342B30889300B98F50 /* ForgotPasswordVC.storyboard */; };
 		D63441392B30894100B98F50 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63441382B30894100B98F50 /* ForgotPasswordVC.swift */; };
 		D6829BC62B2FF2FD005FDC15 /* RegisterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6829BC52B2FF2FD005FDC15 /* RegisterVC.storyboard */; };
@@ -73,6 +74,7 @@
 		36FF114A2B2F4A2B00187EA2 /* ActivitiesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesTableViewCell.xib; sourceTree = "<group>"; };
 		A0C682D12B332EF200760359 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		A0C682D32B33371900760359 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A0C682E42B33624E00760359 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		D63441342B30889300B98F50 /* ForgotPasswordVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPasswordVC.storyboard; sourceTree = "<group>"; };
 		D63441382B30894100B98F50 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		D6829BC52B2FF2FD005FDC15 /* RegisterVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterVC.storyboard; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		36FF10FB2B2DC2D800187EA2 /* brasil */ = {
 			isa = PBXGroup;
 			children = (
+				A0C682E32B33623900760359 /* Alert */,
 				36FF11102B2DC32B00187EA2 /* Resources */,
 				36FF11122B2DC39D00187EA2 /* Model */,
 				36FF11212B2DC77500187EA2 /* Screens */,
@@ -260,6 +263,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		A0C682E32B33623900760359 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				A0C682E42B33624E00760359 /* Alert.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		D63441332B30886F00B98F50 /* ForgotPasswordVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,6 +387,7 @@
 				36FF11312B2DC96900187EA2 /* LoginVC.swift in Sources */,
 				36FF11292B2DC80600187EA2 /* EmbassyVC.swift in Sources */,
 				36FF11232B2DC79800187EA2 /* TabBarController.swift in Sources */,
+				A0C682E52B33624E00760359 /* Alert.swift in Sources */,
 				36FF10FD2B2DC2D800187EA2 /* AppDelegate.swift in Sources */,
 				D63441392B30894100B98F50 /* ForgotPasswordVC.swift in Sources */,
 				36FF11412B2F403400187EA2 /* EmbassyService.swift in Sources */,

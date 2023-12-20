@@ -17,6 +17,7 @@ class LoginViewModel {
             guard self != nil else { return }
             if let error = error {
                 completion(false, error.localizedDescription)
+                
             } else {
                 completion(true, nil)
             }
