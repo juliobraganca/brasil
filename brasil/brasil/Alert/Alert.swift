@@ -14,6 +14,11 @@ enum AlertStrings: String {
     case errorIncorrect = "Dados incorretos"
     case cancelLoginGoogle = "Você cancelou o acesso com google"
     case cancelLoginFacebook = "Você cancelou o acesso com Facebook"
+    case errorEmailForgot = "Erro ao enviar email de recuperação"
+    case successEmailForgot = "mail de redefinição de senha enviado com sucesso. Verifique sua caixa de entrada!"
+    case errorEmaiDdataForgot = "Verifique os dados inseridos e tente novamente!"
+    
+    
     case errorRegister = "Erro ao cadastrar. Verifique seus dados"
     case sucessRegister = "Registro realizado com sucesso!"
     case congratulations = "Parabéns"
@@ -42,7 +47,8 @@ class Alert: NSObject {
             self.controller.present(alertController, animated: true, completion: nil)
 
         }
-
+    
+    
     }
 
 
