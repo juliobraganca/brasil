@@ -113,5 +113,69 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7F5C57C7-4030-408C-A545-C24A5A97F5B9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "brasil/Screens/HomeVC/HomeVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "pickerView(_:didSelectRow:inComponent:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7F1394C5-02D6-4012-9E17-EFEFD33B3A8D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "brasil/Screens/HomeVC/HomeVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "tappedEnterButton(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7F1394C5-02D6-4012-9E17-EFEFD33B3A8D - 89a474912252c73f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "brasil.HomeVC.configLabels() -&gt; ()"
+                  moduleName = "brasil"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliobraganca/Code/iOS/brasil/brasil/brasil/Screens/HomeVC/HomeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "7F1394C5-02D6-4012-9E17-EFEFD33B3A8D - a8fb17be407667b3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "brasil.HomeVC.tappedEnterButton(Any) -&gt; ()"
+                  moduleName = "brasil"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliobraganca/Code/iOS/brasil/brasil/brasil/Screens/HomeVC/HomeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "392">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

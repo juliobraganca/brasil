@@ -15,128 +15,74 @@ class HomeVC: UIViewController {
     
     @IBOutlet weak var messageLabel: UILabel!
     
-    @IBOutlet weak var nameLabel: UILabel!
-    
-    @IBOutlet weak var enterButton: UIButton!
-    
-    @IBOutlet weak var countryLabel: UILabel!
-    
     @IBOutlet weak var countryPickerView: UIPickerView!
     
-    @IBOutlet weak var nameTextField: UITextField!
-    
-    @IBOutlet weak var countryTextField: UITextField!
-    
-    @IBOutlet weak var editInformationButton: UIButton!
-    
-    @IBOutlet weak var saveInformationButton: UIButton!
+    @IBOutlet weak var enterButton: UIButton!
     
     var welcomeText = "" {
         didSet {
             welcomeLabel.text = "Welcome to Brazil, \(welcomeText)"
         }
     }
+    var selectedCountry: String?
+    let countries = ["USA",
+                     "Turkey",
+                     "Israel",
+                     "China",
+                     "France",
+                     "Portugal",
+                     "Russia"
     
-    var embassyCountry = "usa"
+]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         //        configTextFields()
+        countryPickerView.dataSource = self
+        countryPickerView.delegate = self
         configLabels()
         configButtons()
     }
     
-    //    @IBAction func tappedEditInformationButton(_ sender: Any) {
-    //        let ac = UIAlertController(title: nil, message: "You can edit the fields", preferredStyle: .alert)
-    //        ac.addAction(UIAlertAction(title: "OK", style: .default))
-    //        present(ac, animated: true)
-    //        editableFields()
-    //        saveInformationButton.isHidden = false
-    //        editInformationButton.isHidden = true
-    //    }
-    //
-    //
-    //    @IBAction func tappedSaveInformationButton(_ sender: Any) {
-    //        let ac = UIAlertController(title: nil, message: "Information Saved!", preferredStyle: .alert)
-    //        ac.addAction(UIAlertAction(title: "OK", style: .default))
-    //        present(ac, animated: true)
-    //        notEditableFields()
-    //        editInformationButton.isHidden = false
-    //        saveInformationButton.isHidden = true
-    //        welcomeText = nameTextField.text ?? ""
-    //    }
-    
+    @IBAction func tappedEnterButton(_ sender: Any) {
+        selectedCountry = countries[countryPickerView.selectedRow(inComponent: 0)]
+        showEmbassyVC()
+    }
+
+    func showEmbassyVC() {
+        let embassyVC = UIStoryboard(name: "EmbassyVC", bundle: nil).instantiateViewController(withIdentifier: "EmbassyVC") as? EmbassyVC
+        embassyVC?.homeVC = self
+        navigationController?.pushViewController(embassyVC ?? UIViewController(), animated: true)
+    }
     
     func configLabels(){
         welcomeLabel.text = "Welcome to Brazil!"
         welcomeLabel.textAlignment = .center
         welcomeLabel.font = UIFont.boldSystemFont(ofSize: 17)
-        
-        //        nameLabel.text = "Name:"
-        //
-        //        countryLabel.text = "Country:"
-        
-        messageLabel.text = "Insert your country bellow to get information about embassy in Brazil"
+        messageLabel.text = "Chose your country bellow to get information about embassy in Brazil"
     }
     
     func configButtons() {
-        //        saveInformationButton.isHidden = true
-        //        saveInformationButton.backgroundColor = .red
-        //        saveInformationButton.tintColor = .white
-        //
-        //        editInformationButton.isHidden = false
-        //        editInformationButton.backgroundColor = .red
-        //        editInformationButton.tintColor = .white
-        
         enterButton.setTitle("Enter", for: .normal)
-        
+    }
+}
+
+extension HomeVC: UIPickerViewDataSource, UIPickerViewDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
     }
     
-    //    func configTextFields(){
-    //        notEditableFields()
-    //
-    //        //Assinando contratos
-    //        nameTextField.delegate = self
-    //        countryTextField.delegate = self
-    //
-    //        //Configurando Teclados
-    //        nameTextField.keyboardType = .namePhonePad
-    //        countryTextField.keyboardType = .namePhonePad
-    //
-    //        //Placeholder
-    //        nameTextField.placeholder = "Insert your name"
-    //        countryTextField.placeholder = "Insert your country"
-    //    }
-    //
-    //    func notEditableFields() {
-    //        nameTextField.isEnabled = false
-    //        countryTextField.isEnabled = false
-    //    }
-    //
-    //
-    //    func editableFields() {
-    //        nameTextField.isEnabled = true
-    //        countryTextField.isEnabled = true
-    //    }
-    //}
-    
-    //extension HomeVC: UITextFieldDelegate {
-    //    public func textFieldDidBeginEditing(_ textField: UITextField) {
-    //        print("textFieldDidBeginEditing")
-    //        textField.layer.borderWidth = 1.0
-    //        textField.layer.borderColor = UIColor.blue.cgColor
-    //    }
-    //
-    //    public func textFieldDidEndEditing(_ textField: UITextField) {
-    //        print("textFieldDidEndEditing")
-    //        textField.layer.borderWidth = 0
-    //    }
-    //
-    //    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    //        print("textFieldShouldReturn")
-    //        textField.resignFirstResponder()
-    //        return true
-    //    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return countries.count
     }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return countries[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedCountry = countries[row]
+    }
+}
 

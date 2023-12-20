@@ -11,17 +11,27 @@ class EmbassyVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var viewModel: EmbassyViewModel = EmbassyViewModel()
-    var homeVC: HomeVC = HomeVC()
+    var homeVC: HomeVC?
+    
+    var selectedEmbassy = "" {
+        didSet {
+            title = "Embassies of \(selectedEmbassy)"
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Embassies"
         viewModel.delegate = self
-//        viewModel.fetchEmbassyAbroad(source: "usa")
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        viewModel.fetchEmbassyAbroad(source: "usa")
+        if let selectedCountry = homeVC?.selectedCountry {
+            selectedEmbassy = selectedCountry
+            viewModel.fetchEmbassyAbroad(source: selectedCountry.lowercased())
+        } else {
+            print("selectedCountry is nil")
+        }
     }
     
     func configTableView() {

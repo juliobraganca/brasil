@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,10 +31,13 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xg8-rK-vZJ">
                                 <rect key="frame" x="30" y="130.66666666666666" width="333" height="215.99999999999997"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHt-dY-zVh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHt-dY-zVh" userLabel="enter Button">
                                 <rect key="frame" x="30" y="346.66666666666669" width="333" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Enter"/>
+                                <connections>
+                                    <action selector="tappedEnterButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="T4w-8H-qYM"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brasilGringo" translatesAutoresizingMaskIntoConstraints="NO" id="Ih8-TA-rkS">
                                 <rect key="frame" x="62" y="401.66666666666669" width="269" height="143.00000000000006"/>
@@ -64,6 +67,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="EnterButton" destination="IHt-dY-zVh" id="R2a-Ce-EoO"/>
                         <outlet property="countryPickerView" destination="xg8-rK-vZJ" id="Jef-5G-Ske"/>
                         <outlet property="enterButton" destination="IHt-dY-zVh" id="inS-ai-9ZK"/>
                         <outlet property="messageLabel" destination="M6O-W2-8q6" id="typ-AY-wwy"/>
