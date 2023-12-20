@@ -68,6 +68,9 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="facebookLogin"/>
+                                <connections>
+                                    <action selector="tappedFacebookLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="htv-2R-Zes"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6J-mk-cOW">
                                 <rect key="frame" x="69" y="739" width="179" height="21"/>
@@ -129,7 +132,7 @@
                     <connections>
                         <outlet property="accountLabel" destination="M6J-mk-cOW" id="JJk-Wk-vtf"/>
                         <outlet property="emailTextField" destination="3sp-Yz-r4P" id="5nP-8I-LHs"/>
-                        <outlet property="facebookLoginButton" destination="YHD-Fx-ky4" id="hl4-mc-vKY"/>
+                        <outlet property="facebookLoginButton" destination="YHD-Fx-ky4" id="bun-K5-agz"/>
                         <outlet property="forgotPasswordButton" destination="1Pe-qm-EYs" id="RO9-S7-cDI"/>
                         <outlet property="gmailLoginButton" destination="6h3-Mz-3fd" id="jtF-01-pag"/>
                         <outlet property="loginButton" destination="RFd-lg-M9k" id="eHb-fJ-5cC"/>

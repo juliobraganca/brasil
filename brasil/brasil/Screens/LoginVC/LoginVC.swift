@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import FacebookLogin
 
 
 
@@ -32,6 +33,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var registerButton: UIButton!
     
     var auth: Auth?
+    let LoginFacebookButton = FBLoginButton(frame: .zero)
     
     private var viewmodel: LoginViewModel = LoginViewModel()
     
@@ -81,7 +83,15 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         }
     }
     
-
+    
+    
+    @IBAction func tappedFacebookLoginButton(_ sender: Any) {
+        
+        LoginFacebookButton.delegate = self
+        LoginFacebookButton.isHidden = true
+        LoginFacebookButton.sendActions(for: .touchUpInside)
+    }
+    
 
     func configElements() {
         emailTextField.placeholder = "E-mail Address"
@@ -113,5 +123,24 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         textField.layer.borderWidth = 0
         textField.layer.borderColor = UIColor.gray.cgColor
+    }
+}
+
+
+extension LoginVC: LoginButtonDelegate {
+    
+    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+        if error != nil {
+            print("showAllert(title: Atencão, message: Erro ao logar com facebook)")
+            
+        } else if result?.isCancelled == true {
+            print(" showAllert(title: Atencão, message: Você cancelou o acesso pelo facebook")
+            
+        } else {
+            self.navigationController?.pushViewController(TabBarController(), animated: true)
+        }
+    }
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginKit.FBLoginButton) {
+        
     }
 }

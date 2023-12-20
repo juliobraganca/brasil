@@ -8,7 +8,7 @@
 import Foundation
 import Firebase
 import GoogleSignIn
-
+import FacebookCore
 
 class LoginViewModel {
     
