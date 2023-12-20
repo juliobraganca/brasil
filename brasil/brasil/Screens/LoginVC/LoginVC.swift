@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginVC: UIViewController, UITextFieldDelegate {
     
@@ -27,11 +28,12 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var registerButton: UIButton!
     
-    
-    
+    var auth: Auth?
+    private var viewmodel: LoginViewModel = LoginViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.auth = Auth.auth()
         configElements()
         
     }
@@ -42,20 +44,27 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
-        let registerScreen = UIStoryboard(name: "RegisterVC", bundle: nil).instantiateViewController(withIdentifier: "RegisterVC") as? RegisterVC
-        navigationController?.pushViewController(registerScreen ?? UIViewController(), animated: true)
-    }
+        
+        
+                let registerScreen = UIStoryboard(name: "RegisterVC", bundle: nil).instantiateViewController(withIdentifier: "RegisterVC") as? RegisterVC
+                navigationController?.pushViewController(registerScreen ?? UIViewController(), animated: true)
+            }
     
     @IBAction func tappedLoginButton(_ sender: UIButton) {
-        let homeVC = UIStoryboard(name: "HomeVC", bundle: nil).instantiateViewController(withIdentifier: "HomeVC") as? HomeVC
-        
-        let embassyVC = UIStoryboard(name: "EmbassyVC", bundle: nil).instantiateViewController(withIdentifier: "EmbassyVC") as? EmbassyVC
-        
-        let activitiesVC = UIStoryboard(name: "ActivitiesVC", bundle: nil).instantiateViewController(withIdentifier: "ActivitiesVC") as? ActivitiesVC
-        
-        self.navigationController?.pushViewController(TabBarController(), animated: true)
+        guard let email = emailTextField.text, let password = passwordTextField.text else {
+            return
+        }
+        viewmodel.signIn(email: email, password: password) { [weak self] success, errorMessage in
+            guard let self = self else { return }
+            if success {
+                self.navigationController?.pushViewController(TabBarController(), animated: true)
+            } else {
+                print("Deu ruim!")
+            }
+        }
     }
-    
+
+
     func configElements() {
         emailTextField.placeholder = "E-mail Address"
         emailTextField.keyboardType = .emailAddress
