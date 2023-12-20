@@ -7,6 +7,9 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
+
+
 
 class LoginVC: UIViewController, UITextFieldDelegate {
     
@@ -29,6 +32,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var registerButton: UIButton!
     
     var auth: Auth?
+    
     private var viewmodel: LoginViewModel = LoginViewModel()
     
     override func viewDidLoad() {
@@ -63,6 +67,20 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             }
         }
     }
+    
+    @IBAction func tappedGmailLogin(_ sender: Any) {
+        
+        viewmodel.signInWithGoogle(presentingViewController: self) { success in
+            if success {
+                DispatchQueue.main.async {
+                    self.navigationController?.pushViewController(TabBarController(), animated: true)
+                }
+            } else {
+                print("falha ao autenticar")
+            }
+        }
+    }
+    
 
 
     func configElements() {
