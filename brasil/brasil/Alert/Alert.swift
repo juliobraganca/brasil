@@ -15,7 +15,7 @@ enum AlertStrings: String {
     case cancelLoginGoogle = "Você cancelou o acesso com google"
     case cancelLoginFacebook = "Você cancelou o acesso com Facebook"
     case errorEmailForgot = "Erro ao enviar email de recuperação"
-    case successEmailForgot = "mail de redefinição de senha enviado com sucesso. Verifique sua caixa de entrada!"
+    case successEmailForgot = "Email de redefinição de senha enviado com sucesso. Verifique sua caixa de entrada!"
     case errorEmaiDdataForgot = "Verifique os dados inseridos e tente novamente!"
     
     
