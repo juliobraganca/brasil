@@ -10,7 +10,6 @@ import Firebase
 
 class ForgotPasswordVC: UIViewController {
     
-    private var viewModel: ForgotPasswordViewModel = ForgotPasswordViewModel()
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var forgotPasswordLabel: UILabel!
@@ -19,6 +18,7 @@ class ForgotPasswordVC: UIViewController {
     
     var auth: Auth?
     var alert: Alert?
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,9 +46,9 @@ class ForgotPasswordVC: UIViewController {
     }
     
     @IBAction func tappedRecoverButton(_ sender: Any) {
-        if self.emailTextField.validateEmail() {
-            let email:String = emailTextField.text ?? ""
-            auth?.sendPasswordReset(withEmail: email) { (error) in
+        if emailTextField.validateEmail() {
+               let email = emailTextField.text ?? ""
+               auth?.sendPasswordReset(withEmail: email) { (error) in
                 if error != nil {
                     self.alert?.getAlert(title: AlertStrings.atention.rawValue, message: AlertStrings.errorEmailForgot.rawValue)
                 } else {
@@ -75,10 +75,4 @@ extension ForgotPasswordVC: UITextFieldDelegate {
     }
 }
 
-extension UITextField {
-    func validateEmaill() -> Bool {
-        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let validateRegex = NSPredicate(format: "SELF MATCHES %@", emailRegex)
-        return validateRegex.evaluate (with: self.text)
-    }
-}
+

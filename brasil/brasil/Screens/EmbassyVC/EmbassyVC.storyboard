@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,26 +17,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Stm-Ph-xei">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="716"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9QQ-WI-T9m">
+                                <rect key="frame" x="130" y="785" width="133" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="tgr-07-r8p"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Exit">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Futura-Medium"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="tappedExitButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wWj-bu-AkV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9QQ-WI-T9m" secondAttribute="trailing" constant="130" id="2j0-KC-iPu"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="9QQ-WI-T9m" secondAttribute="bottom" constant="8" id="FJK-Gw-pvk"/>
                             <constraint firstItem="Stm-Ph-xei" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="H84-Ef-kI5"/>
+                            <constraint firstItem="9QQ-WI-T9m" firstAttribute="top" secondItem="Stm-Ph-xei" secondAttribute="bottom" constant="10" id="Spx-4Q-3Zd"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Stm-Ph-xei" secondAttribute="trailing" id="jXN-w2-grw"/>
                             <constraint firstItem="Stm-Ph-xei" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="rBO-I5-mL5"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Stm-Ph-xei" secondAttribute="bottom" id="yvz-cM-jed"/>
+                            <constraint firstItem="9QQ-WI-T9m" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="130" id="vbb-lL-glh"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="exitButton" destination="9QQ-WI-T9m" id="ZPc-0p-ofR"/>
                         <outlet property="tableView" destination="Stm-Ph-xei" id="Yba-b5-8n8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="134" y="-39"/>
+            <point key="canvasLocation" x="133.58778625954199" y="-39.436619718309863"/>
         </scene>
     </scenes>
     <resources>

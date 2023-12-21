@@ -30,6 +30,7 @@
 		36FF11472B2F497000187EA2 /* ActivitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF11462B2F497000187EA2 /* ActivitiesViewModel.swift */; };
 		36FF114B2B2F4A2B00187EA2 /* ActivitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF11492B2F4A2B00187EA2 /* ActivitiesTableViewCell.swift */; };
 		36FF114C2B2F4A2B00187EA2 /* ActivitiesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36FF114A2B2F4A2B00187EA2 /* ActivitiesTableViewCell.xib */; };
+		A06568682B3478BB00C3AAE8 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A06568672B3478BB00C3AAE8 /* IQKeyboardManagerSwift */; };
 		A0C682A72B33296200760359 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A0C682A62B33296200760359 /* FirebaseAuth */; };
 		A0C682D22B332EF200760359 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C682D12B332EF200760359 /* LoginViewModel.swift */; };
 		A0C682D42B33371900760359 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0C682D32B33371900760359 /* GoogleService-Info.plist */; };
@@ -40,7 +41,6 @@
 		A0C682E02B335AD100760359 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = A0C682DF2B335AD100760359 /* FacebookCore */; };
 		A0C682E22B335AD100760359 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = A0C682E12B335AD100760359 /* FacebookLogin */; };
 		A0C682E52B33624E00760359 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C682E42B33624E00760359 /* Alert.swift */; };
-		A0C682E82B33733600760359 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C682E72B33733600760359 /* ForgotPasswordViewModel.swift */; };
 		D63441352B30889300B98F50 /* ForgotPasswordVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63441342B30889300B98F50 /* ForgotPasswordVC.storyboard */; };
 		D63441392B30894100B98F50 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63441382B30894100B98F50 /* ForgotPasswordVC.swift */; };
 		D6829BC62B2FF2FD005FDC15 /* RegisterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6829BC52B2FF2FD005FDC15 /* RegisterVC.storyboard */; };
@@ -76,7 +76,6 @@
 		A0C682D12B332EF200760359 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		A0C682D32B33371900760359 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A0C682E42B33624E00760359 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
-		A0C682E72B33733600760359 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		D63441342B30889300B98F50 /* ForgotPasswordVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPasswordVC.storyboard; sourceTree = "<group>"; };
 		D63441382B30894100B98F50 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		D6829BC52B2FF2FD005FDC15 /* RegisterVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterVC.storyboard; sourceTree = "<group>"; };
@@ -89,6 +88,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0C682DC2B335AD100760359 /* FacebookAEM in Frameworks */,
+				A06568682B3478BB00C3AAE8 /* IQKeyboardManagerSwift in Frameworks */,
 				A0C682E02B335AD100760359 /* FacebookCore in Frameworks */,
 				A0C682D92B33377200760359 /* GoogleSignInSwift in Frameworks */,
 				A0C682DE2B335AD100760359 /* FacebookBasics in Frameworks */,
@@ -257,6 +257,13 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		A065685B2B34623A00C3AAE8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		A0C682D02B332EC200760359 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,18 +280,9 @@
 			path = Alert;
 			sourceTree = "<group>";
 		};
-		A0C682E62B33730800760359 /* ForgotPasswordViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				A0C682E72B33733600760359 /* ForgotPasswordViewModel.swift */,
-			);
-			path = ForgotPasswordViewModel;
-			sourceTree = "<group>";
-		};
 		D63441332B30886F00B98F50 /* ForgotPasswordVC */ = {
 			isa = PBXGroup;
 			children = (
-				A0C682E62B33730800760359 /* ForgotPasswordViewModel */,
 				D63441342B30889300B98F50 /* ForgotPasswordVC.storyboard */,
 				D63441382B30894100B98F50 /* ForgotPasswordVC.swift */,
 			);
@@ -294,6 +292,7 @@
 		D6829BC42B2FF2A4005FDC15 /* RegisterVC */ = {
 			isa = PBXGroup;
 			children = (
+				A065685B2B34623A00C3AAE8 /* ViewModel */,
 				D6829BC52B2FF2FD005FDC15 /* RegisterVC.storyboard */,
 				D6829BC92B2FF3D2005FDC15 /* RegisterVC.swift */,
 			);
@@ -324,6 +323,7 @@
 				A0C682DD2B335AD100760359 /* FacebookBasics */,
 				A0C682DF2B335AD100760359 /* FacebookCore */,
 				A0C682E12B335AD100760359 /* FacebookLogin */,
+				A06568672B3478BB00C3AAE8 /* IQKeyboardManagerSwift */,
 			);
 			productName = brasil;
 			productReference = 36FF10F92B2DC2D800187EA2 /* brasil.app */;
@@ -357,6 +357,7 @@
 				A0C682992B33296200760359 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				A0C682D52B33377200760359 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				A0C682DA2B335AD100760359 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				A06568662B3478BB00C3AAE8 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 36FF10FA2B2DC2D800187EA2 /* Products */;
 			projectDirPath = "";
@@ -409,7 +410,6 @@
 				36FF11272B2DC7F900187EA2 /* ActivitiesVC.swift in Sources */,
 				36FF113A2B2DE0CE00187EA2 /* EmbassyTableViewCell.swift in Sources */,
 				36FF11142B2DC47800187EA2 /* EmbassyAbroad.swift in Sources */,
-				A0C682E82B33733600760359 /* ForgotPasswordViewModel.swift in Sources */,
 				36FF114B2B2F4A2B00187EA2 /* ActivitiesTableViewCell.swift in Sources */,
 				A0C682D22B332EF200760359 /* LoginViewModel.swift in Sources */,
 				36FF113E2B2DE26E00187EA2 /* EmbassyViewModel.swift in Sources */,
@@ -637,6 +637,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A06568662B3478BB00C3AAE8 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.16;
+			};
+		};
 		A0C682992B33296200760359 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -664,6 +672,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A06568672B3478BB00C3AAE8 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A06568662B3478BB00C3AAE8 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
 		A0C682A62B33296200760359 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A0C682992B33296200760359 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

@@ -6,13 +6,17 @@
 //
 
 import UIKit
+import Firebase
+import FacebookLogin
 
 class EmbassyVC: UIViewController {
+    
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var exitButton: UIButton!
     
     var viewModel: EmbassyViewModel = EmbassyViewModel()
     var homeVC: HomeVC?
-    
+    var auth: Auth?
     var selectedEmbassy = "" {
         didSet {
             title = "Embassies of \(selectedEmbassy)"
@@ -23,6 +27,7 @@ class EmbassyVC: UIViewController {
         super.viewDidLoad()
         title = "Embassies"
         viewModel.delegate = self
+        self.auth = Auth.auth()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,6 +37,17 @@ class EmbassyVC: UIViewController {
         } else {
             print("selectedCountry is nil")
         }
+        
+    }
+    
+    
+    
+    @IBAction func tappedExitButton(_ sender: Any) {
+        logoutFromFirebase()
+        logoutFromFacebook()
+        let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as? LoginVC
+        navigationController?.pushViewController(loginVC ?? UIViewController(), animated: true)
+        
     }
     
     func configTableView() {
@@ -39,6 +55,20 @@ class EmbassyVC: UIViewController {
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.register(EmbassyTableViewCell.nib(), forCellReuseIdentifier: EmbassyTableViewCell.identifier)
+    }
+    
+    func logoutFromFacebook() {
+        let loginManager = LoginManager()
+        loginManager.logOut()
+    }
+    
+    func logoutFromFirebase(){
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
+        }
     }
 }
 

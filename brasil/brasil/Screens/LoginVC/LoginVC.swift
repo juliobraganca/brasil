@@ -43,8 +43,16 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         self.auth = Auth.auth()
         configElements()
         self.alert = Alert(controller: self)
+        checkLogin()
+        self.tabBarController?.tabBar.isHidden = true
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
     
     @IBAction func tappedForgotPasswordButton(_ sender: UIButton) {
         let forgotPasswordScreen = UIStoryboard(name: "ForgotPasswordVC", bundle: nil).instantiateViewController(withIdentifier: "ForgotPasswordVC") as? ForgotPasswordVC
@@ -121,8 +129,15 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         textField.layer.borderWidth = 0
         textField.layer.borderColor = UIColor.gray.cgColor
     }
+    func checkLogin() {
+        if AccessToken.current != nil || Auth.auth().currentUser != nil{
+            self.navigationController?.pushViewController(TabBarController(), animated: false)
+            self.navigationController?.navigationBar.isHidden = true
+        } else {
+            
+        }
+    }  
 }
-
 
 extension LoginVC: LoginButtonDelegate {
     

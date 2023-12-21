@@ -9,6 +9,7 @@ import UIKit
 import Firebase
 import GoogleSignIn
 import FacebookCore
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             didFinishLaunchingWithOptions: launchOptions
         )
         FirebaseApp.configure()
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.toolbarDoneBarButtonItemText = "OK"
         return true
     }
     
