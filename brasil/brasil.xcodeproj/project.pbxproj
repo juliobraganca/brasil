@@ -30,6 +30,9 @@
 		36FF11472B2F497000187EA2 /* ActivitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF11462B2F497000187EA2 /* ActivitiesViewModel.swift */; };
 		36FF114B2B2F4A2B00187EA2 /* ActivitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF11492B2F4A2B00187EA2 /* ActivitiesTableViewCell.swift */; };
 		36FF114C2B2F4A2B00187EA2 /* ActivitiesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36FF114A2B2F4A2B00187EA2 /* ActivitiesTableViewCell.xib */; };
+		A06568602B346AF000C3AAE8 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = A065685F2B346AF000C3AAE8 /* Field.swift */; };
+		A06568632B346D5D00C3AAE8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06568622B346D5D00C3AAE8 /* Extensions.swift */; };
+		A06568682B3478BB00C3AAE8 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A06568672B3478BB00C3AAE8 /* IQKeyboardManagerSwift */; };
 		A0C682A72B33296200760359 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A0C682A62B33296200760359 /* FirebaseAuth */; };
 		A0C682D22B332EF200760359 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C682D12B332EF200760359 /* LoginViewModel.swift */; };
 		A0C682D42B33371900760359 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0C682D32B33371900760359 /* GoogleService-Info.plist */; };
@@ -73,6 +76,8 @@
 		36FF11462B2F497000187EA2 /* ActivitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewModel.swift; sourceTree = "<group>"; };
 		36FF11492B2F4A2B00187EA2 /* ActivitiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewCell.swift; sourceTree = "<group>"; };
 		36FF114A2B2F4A2B00187EA2 /* ActivitiesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesTableViewCell.xib; sourceTree = "<group>"; };
+		A065685F2B346AF000C3AAE8 /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
+		A06568622B346D5D00C3AAE8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A0C682D12B332EF200760359 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		A0C682D32B33371900760359 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A0C682E42B33624E00760359 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -89,6 +94,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0C682DC2B335AD100760359 /* FacebookAEM in Frameworks */,
+				A06568682B3478BB00C3AAE8 /* IQKeyboardManagerSwift in Frameworks */,
 				A0C682E02B335AD100760359 /* FacebookCore in Frameworks */,
 				A0C682D92B33377200760359 /* GoogleSignInSwift in Frameworks */,
 				A0C682DE2B335AD100760359 /* FacebookBasics in Frameworks */,
@@ -120,6 +126,8 @@
 		36FF10FB2B2DC2D800187EA2 /* brasil */ = {
 			isa = PBXGroup;
 			children = (
+				A06568612B346D4300C3AAE8 /* Extensions */,
+				A065685E2B346ADE00C3AAE8 /* Field */,
 				A0C682E32B33623900760359 /* Alert */,
 				36FF11102B2DC32B00187EA2 /* Resources */,
 				36FF11122B2DC39D00187EA2 /* Model */,
@@ -257,6 +265,29 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		A065685B2B34623A00C3AAE8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A065685E2B346ADE00C3AAE8 /* Field */ = {
+			isa = PBXGroup;
+			children = (
+				A065685F2B346AF000C3AAE8 /* Field.swift */,
+			);
+			path = Field;
+			sourceTree = "<group>";
+		};
+		A06568612B346D4300C3AAE8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A06568622B346D5D00C3AAE8 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A0C682D02B332EC200760359 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +325,7 @@
 		D6829BC42B2FF2A4005FDC15 /* RegisterVC */ = {
 			isa = PBXGroup;
 			children = (
+				A065685B2B34623A00C3AAE8 /* ViewModel */,
 				D6829BC52B2FF2FD005FDC15 /* RegisterVC.storyboard */,
 				D6829BC92B2FF3D2005FDC15 /* RegisterVC.swift */,
 			);
@@ -324,6 +356,7 @@
 				A0C682DD2B335AD100760359 /* FacebookBasics */,
 				A0C682DF2B335AD100760359 /* FacebookCore */,
 				A0C682E12B335AD100760359 /* FacebookLogin */,
+				A06568672B3478BB00C3AAE8 /* IQKeyboardManagerSwift */,
 			);
 			productName = brasil;
 			productReference = 36FF10F92B2DC2D800187EA2 /* brasil.app */;
@@ -357,6 +390,7 @@
 				A0C682992B33296200760359 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				A0C682D52B33377200760359 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				A0C682DA2B335AD100760359 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				A06568662B3478BB00C3AAE8 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 36FF10FA2B2DC2D800187EA2 /* Products */;
 			projectDirPath = "";
@@ -393,6 +427,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A06568632B346D5D00C3AAE8 /* Extensions.swift in Sources */,
 				36FF11012B2DC2D800187EA2 /* HomeVC.swift in Sources */,
 				36FF11472B2F497000187EA2 /* ActivitiesViewModel.swift in Sources */,
 				36FF11312B2DC96900187EA2 /* LoginVC.swift in Sources */,
@@ -403,6 +438,7 @@
 				D63441392B30894100B98F50 /* ForgotPasswordVC.swift in Sources */,
 				36FF11412B2F403400187EA2 /* EmbassyService.swift in Sources */,
 				36FF11452B2F496500187EA2 /* ActivitiesService.swift in Sources */,
+				A06568602B346AF000C3AAE8 /* Field.swift in Sources */,
 				36FF11162B2DC48500187EA2 /* CountryActivities.swift in Sources */,
 				D6829BCA2B2FF3D2005FDC15 /* RegisterVC.swift in Sources */,
 				36FF10FF2B2DC2D800187EA2 /* SceneDelegate.swift in Sources */,
@@ -637,6 +673,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A06568662B3478BB00C3AAE8 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.16;
+			};
+		};
 		A0C682992B33296200760359 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -664,6 +708,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A06568672B3478BB00C3AAE8 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A06568662B3478BB00C3AAE8 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
 		A0C682A62B33296200760359 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A0C682992B33296200760359 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
