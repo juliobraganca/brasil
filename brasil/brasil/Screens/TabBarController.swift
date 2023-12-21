@@ -31,14 +31,7 @@ class TabBarController: UITabBarController {
             return nav
         }()
         
-        let embassy: UINavigationController = {
-            let vc = UIStoryboard(name: "EmbassyVC", bundle: nil).instantiateViewController(withIdentifier: "EmbassyVC") as? EmbassyVC
-            let nav = UINavigationController(rootViewController: vc ?? UIViewController())
-            nav.tabBarItem = UITabBarItem(title: "Embassies", image: UIImage(systemName: "building.columns"), tag: 2 )
-            return nav
-        }()
-        
-        viewControllers = [home, activities, embassy]
+        viewControllers = [home, activities]
     }
     
     func configLayout() {
