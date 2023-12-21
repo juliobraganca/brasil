@@ -10,7 +10,6 @@ import Firebase
 
 class ForgotPasswordVC: UIViewController {
     
-    private var viewModel: ForgotPasswordViewModel = ForgotPasswordViewModel()
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var forgotPasswordLabel: UILabel!
