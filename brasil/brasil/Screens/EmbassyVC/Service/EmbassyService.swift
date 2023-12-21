@@ -12,7 +12,7 @@ class EmbassyService {
         guard let url = URL(string: "https://travel-info-api.p.rapidapi.com/find-embassy?source=\(source)&destination=brazil") else { return }
         
         let headers = [
-            "X-RapidAPI-Key": "05b4860263msh7862a91faa2cf04p172101jsna1a12ae8d7d0",
+            "X-RapidAPI-Key": "dd833e79efmsh637ad2745ae2477p1c7d11jsn93c035258ef1",
             "X-RapidAPI-Host": "travel-info-api.p.rapidapi.com"
         ]
         
