@@ -18,6 +18,10 @@ enum AlertStrings: String {
     case successEmailForgot = "Email de redefinição de senha enviado com sucesso. Verifique sua caixa de entrada!"
     case errorEmaiDdataForgot = "Verifique os dados inseridos e tente novamente!"
     
+    case errorName = "Gentileza, inserir nome com mais de dois caracteries!"
+    case errorEmail = "Por favor, insira um e-mail válidoo!"
+    case errorNational = "Por favor, insira uma nacionalidade válida!"
+    case errorPassword = "Por favor, insira uma como mais de 6 caractéries!"
     
     case errorRegister = "Erro ao cadastrar. Verifique seus dados"
     case sucessRegister = "Registro realizado com sucesso!"
